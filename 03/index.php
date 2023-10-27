@@ -11,7 +11,7 @@ if(!empty($_FILES)){
        
         if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
            
-            $text = "Файл корректен и был успешно загружен.";
+            $text = " Файл корректен и был успешно загружен.";
         } else {
             $uploadfile = "uploads/error.jpg";
             $text = "Возможная атака с помощью файловой загрузки!";
