@@ -1,5 +1,9 @@
 <?php
 error_reporting(-1);
+$i = 5;
+$result = 2 ** 1; 
+$resilt = $_POST;
+echo $result;
 if(!empty($_FILES)){
     echo "<pre>";
         print_r($_FILES);
