@@ -9,10 +9,23 @@
 <table width="225px" cellspacing="0px" cellpadding="0px" border="1px">
 <!-- cell 225px wide (8 columns x 50px) -->
 <?php
-
-for($row=1;$row<=8;$row++)
+$word = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+for($row=0;$row<=9;$row++)
 {
   echo "<tr>";
+  if ($row==0 or $row == 9){
+    for($col=0;$col<=9;$col++){
+      if ($col>0 and $col<9){
+        echo "<td>";
+        echo $word[$col-1];
+        echo "</td>";
+      }
+      else{
+        echo "<td></td>";
+      }
+    }
+  }
+ else {
   for($col=0;$col<=9;$col++)
   {
   $total=$row+$col;
@@ -36,7 +49,7 @@ for($row=1;$row<=8;$row++)
         echo "<td height=25px width=25px bgcolor='red'>" . $row .  "</td>";
     }
   }
-}
+}}
   echo "</tr>";
 }
 ?>
