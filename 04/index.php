@@ -9,21 +9,34 @@
 <table width="225px" cellspacing="0px" cellpadding="0px" border="1px">
 <!-- cell 225px wide (8 columns x 50px) -->
 <?php
+
 for($row=1;$row<=8;$row++)
 {
   echo "<tr>";
-  for($col=1;$col<=8;$col++)
+  for($col=0;$col<=9;$col++)
   {
   $total=$row+$col;
-  if($total%2==0)
+  if ($col == 0) 
   {
-  echo "<td height=25px width=25px bgcolor=#FFFFFF></td>";
+      echo "<td height=25px width=25px bgcolor='red'>" . $row .  "</td>";
+  }elseif($col<=8){
+    if($total%2==0)
+          {
+            echo "<td height=25px width=25px bgcolor=#FFFFFF></td>";
+          }
+        else
+          {
+            echo "<td height=25px width=25px bgcolor=#000000></td>";
+          }
+    }
+  
+  else{
+    if ($col == 9) 
+    {
+        echo "<td height=25px width=25px bgcolor='red'>" . $row .  "</td>";
+    }
   }
-  else
-  {
-  echo "<td height=25px width=25px bgcolor=#000000></td>";
-  }
-  }
+}
   echo "</tr>";
 }
 ?>
