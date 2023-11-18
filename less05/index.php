@@ -10,4 +10,20 @@
     else echo "error";
     echo mysqli_error($db);
 
+    /*$insert = "INSERT INTO gb (name, text) VALUES ('Нурлан', 'Lorem ipsum dolor sit amet, consectetur adipisicing.')";
+$res_insert = mysqli_query($db, $insert);
+if($res_insert) echo 'OK';
+else echo 'Error';
+echo mysqli_error($db);*/
+
+/*$update = "UPDATE gb SET text = CONCAT(text, '|||') WHERE id > 4";
+$res_update = mysqli_query($db, $update) or die(mysqli_error($db));*/
+
+/*$delete = "DELETE FROM gb WHERE id > 4";
+$res_delete = mysqli_query($db, $delete);
+echo mysqli_affected_rows($db);*/
+
+$res = mysqli_query($db, "SELECT * FROM gb");
+var_dump($res);
+
 ?>
