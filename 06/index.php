@@ -234,10 +234,7 @@ function closeSearch() {
    
     //print_r($row);
     /*$data2 = [];
-    while($row = mysqli_fetch_assoc($res)){
-	$data2[$row['id']] = $row;
-    }*/
-
+   */
     foreach ($row as $item) {
         echo "
         <tr>
